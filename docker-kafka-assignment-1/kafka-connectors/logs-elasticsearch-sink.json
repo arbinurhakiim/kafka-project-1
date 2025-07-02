@@ -1,0 +1,8 @@
+{
+  "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+  "topics": "logs-topic",
+  "name": "log-elastic-sink",
+  "connection.url": "http://elasticsearch:9200",
+  "key.ignore": "true",
+  "schema.ignore": "true"
+}
