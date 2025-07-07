@@ -17,22 +17,21 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar" />
         </processorPath>
         <module name="model-common" />
+        <module name="order-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="consumer-api" target="21" />
       <module name="kafka-secure-system" target="21" />
-      <module name="order-common" target="17" />
       <module name="producer-api" target="21" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="kafka-streams" options="-parameters" />
-      <module name="order-common" options="-parameters" />
+      <module name="order-common" options="" />
       <module name="order-consumer" options="-parameters" />
       <module name="order-producer" options="-parameters" />
     </option>
