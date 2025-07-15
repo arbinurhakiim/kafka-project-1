@@ -1,0 +1,12 @@
+{
+  "name": "log-elastic-sink",
+  "config": {
+    "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+    "topics": "logs-topic",
+    "connection.url": "http://elasticsearch:9200",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+    "key.ignore": "true",
+    "schema.ignore": "true"
+  }
+}

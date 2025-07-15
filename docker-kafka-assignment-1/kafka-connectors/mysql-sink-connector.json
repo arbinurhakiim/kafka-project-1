@@ -1,0 +1,22 @@
+{
+  "name": "jdbc-sink-mysql-hourly-transaction",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "tasks.max": "1",
+    "topics": "hourly-transaction-topic",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "connection.url": "jdbc:mysql://mysql:3306/kafka",
+    "connection.user": "root",
+    "connection.password": "root",
+    "table.name.format": "hourly_transaction",
+    "insert.mode": "upsert",
+    "pk.mode": "record_key",
+    "pk.fields": "product_key",
+    "auto.create": "true",
+    "auto.evolve": "true",
+    "transforms": "WrapValue",
+    "transforms.WrapValue.type": "org.apache.kafka.connect.transforms.HoistField$Value",
+    "transforms.WrapValue.field": "transaction_count"
+  }
+}
+
